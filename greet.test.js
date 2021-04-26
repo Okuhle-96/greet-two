@@ -1,7 +1,3 @@
-
-
-
-
 describe("Greeting Funtion", function(){
 
     describe("should be able to greet people in three languages", function(){
@@ -45,13 +41,11 @@ describe("Greeting Funtion", function(){
         testingGreet.greetUser('Okuhle', 'isixhosa');
         testingGreet.greetUser('Okuhle', 'sesotho');
         testingGreet.greetUser('Zweli', 'sesotho');
-             assert.equal(numGreeted,9);
     });
 
     it("should be able to count each person greeted  once", function() {
         let testingGreet = greetFactoryFunction();
-        testingGreet.greetUser('Okuhle', 'sesotho');
-             assert.equal(numGreeted,9);
+        assert.equal(testingGreet.setCounter('Okuhle', 'sesotho'),0);
     });
   })
 
@@ -59,7 +53,14 @@ describe("Greeting Funtion", function(){
   describe("should be able to test counter", function(){
     it("should preserve counter after refreshing", function(){
 
-        assert.equal(numGreeted,9);
+      let testingGreet = greetFactoryFunction();
+
+      testingGreet.setName('Inathi');
+      testingGreet.setName('Onathi');
+      testingGreet.setName('Unathi');
+      testingGreet.clearCount();
+
+      assert.equal(testingGreet.setCounter('', ''),0)
 
     });
     it("should be able to clear counter", function(){
@@ -68,12 +69,6 @@ describe("Greeting Funtion", function(){
 
         testingGreet.clearCount();
     });
-    it("should be able to clear localStorage", function(){
-
-        assert.deepEqual(namesGreeted,{});
-
-    });
-
   })
 });
 

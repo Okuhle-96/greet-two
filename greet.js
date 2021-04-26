@@ -1,6 +1,3 @@
-// creating an instance
-var greetInstanceFactory = greetFactoryFunction();
-
 // inputs
 var userInput = "";
 var languageSelected = "";
@@ -18,6 +15,8 @@ var fullMsg = document.querySelector('.message');
 var count = document.querySelector('.count');
 var errors = document.querySelector('.error')
 var peopleGreeted = document.querySelector('.greeted');
+// declaring local storage variables
+var numGreeted = 0;
 
 
 
@@ -25,9 +24,14 @@ if (localStorage['countUsers']) {
     numGreeted = Number(localStorage['countUsers']);
 }
 
+var namesGreeted;
+ 
 if(localStorage['greetedUsers']) {
     namesGreeted = JSON.parse(localStorage.getItem('greetedUsers'));
 }
+
+// creating an instance
+var greetInstanceFactory = greetFactoryFunction(namesGreeted);
 
 count.innerHTML = greetInstanceFactory.setCounter();
 

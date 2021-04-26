@@ -1,11 +1,13 @@
 var list = document.querySelector('.nameList');
+
+// var numGreeted = 0;
+// var namesGreeted = {};
+
 if(localStorage['greetedUsers']) {
-    namesGreeted = JSON.parse(localStorage.getItem('greetedUsers'));
+ var   namesGreeted = JSON.parse(localStorage.getItem('greetedUsers'));
 }
-
-
 if(localStorage['greetedUsers']) {
-    namesGreeted = JSON.parse(localStorage.getItem('greetedUsers'));
+  var  namesGreeted = JSON.parse(localStorage.getItem('greetedUsers'));
 }
 
 for (var name in namesGreeted) {

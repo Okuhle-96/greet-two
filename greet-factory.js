@@ -1,16 +1,18 @@
 
-var numGreeted = 0;
-var namesGreeted = {};
 
-function greetFactoryFunction() {
 
-    
+function greetFactoryFunction(existingNames) {
+
+    var numGreeted = 0;
+
+    var namesGreeted = existingNames || {}; 
+
     var name = "";
     var afterHello = "";
     var newUser = false;
 
     function counter() {
-        numGreeted ++;
+        numGreeted++;
     }
 
     function addToNames() {
