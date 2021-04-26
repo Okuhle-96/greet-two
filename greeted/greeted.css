@@ -1,0 +1,52 @@
+.line {
+    border: 1px solid #05445E;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    font-family: helvetica;
+    color: #05445E;
+    height: 3000px;
+    }
+    
+    .people h2{
+        width: 80%;
+        text-transform: uppercase;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+     
+        margin-top: 50px;
+        border: 10px solid peru;
+    
+    
+    }
+    .nameList {
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0px;
+    }
+    .back {
+        text-transform: uppercase;
+        padding: 20px;
+        width: 60%;
+        margin: auto;
+        background-color: peru;
+        border: none;
+        color: white;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .back:hover {
+        background-color: #05445E;
+    }
+    
+    a{
+        text-decoration: none;
+        margin: auto;
+        color: white;
+        text-align: center;
+    }
